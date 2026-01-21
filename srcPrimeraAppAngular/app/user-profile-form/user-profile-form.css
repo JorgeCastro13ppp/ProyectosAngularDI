@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  width: 400px;
+  padding: 10px;
+}
+
+/* Espacio interno del contenido */
+mat-card-content {
+  padding: 10px 16px;
+}
+
+/* Separar botones del borde */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-bottom: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.ok {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
