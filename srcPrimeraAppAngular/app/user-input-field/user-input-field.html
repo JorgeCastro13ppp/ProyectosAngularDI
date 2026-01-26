@@ -1,0 +1,17 @@
+<mat-form-field appearance="fill" class="full-width">
+  <mat-label>{{ label }}</mat-label>
+
+  @if (type === 'textarea') {
+    <textarea
+      matInput
+      (input)="emitirCambio($any($event.target).value)">
+      {{ value }}
+    </textarea>
+  } @else {
+    <input
+      matInput
+      [type]="type"
+      [value]="value"
+      (input)="emitirCambio($any($event.target).value)">
+  }
+</mat-form-field>

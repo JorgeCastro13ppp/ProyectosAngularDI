@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { UserInputField } from '../user-input-field/user-input-field';
 
 @Component({
   selector: 'app-user-profile-form',
@@ -16,7 +17,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatDividerModule],
+    MatDividerModule,
+    UserInputField],
   templateUrl: './user-profile-form.html',
   styleUrl: './user-profile-form.css'
 })

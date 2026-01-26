@@ -1,0 +1,16 @@
+<mat-card class="producto">
+  <mat-card-title>{{ producto.nombre }}</mat-card-title>
+
+  <mat-card-content>
+    <p>Precio: {{ producto.precio }} €</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="agregarAlCarrito()">
+      Añadir al carrito
+    </button>
+  </mat-card-actions>
+</mat-card>

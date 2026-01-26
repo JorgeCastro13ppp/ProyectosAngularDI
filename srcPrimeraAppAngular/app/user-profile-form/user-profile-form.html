@@ -1,50 +1,61 @@
 <div class="container">
 
   <mat-card class="card">
+
     <mat-card-header>
-        <mat-card-title>Perfil de Usuario</mat-card-title>
+      <mat-card-title>Perfil de Usuario</mat-card-title>
     </mat-card-header>
-    
 
     <mat-card-content>
       <form>
 
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Nombre</mat-label>
-          <input matInput [(ngModel)]="user.firstName" name="firstName">
-        </mat-form-field>
+        <app-user-input-field
+          label="Nombre"
+          [value]="user.firstName"
+          (valueChange)="user.firstName = $event">
+        </app-user-input-field>
 
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Apellidos</mat-label>
-          <input matInput [(ngModel)]="user.lastName" name="lastName">
-        </mat-form-field>
+        <app-user-input-field
+          label="Apellidos"
+          [value]="user.lastName"
+          (valueChange)="user.lastName = $event">
+        </app-user-input-field>
 
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Email</mat-label>
-          <input matInput type="email" [(ngModel)]="user.email" name="email">
-        </mat-form-field>
+        <app-user-input-field
+          label="Email"
+          type="email"
+          [value]="user.email"
+          (valueChange)="user.email = $event">
+        </app-user-input-field>
 
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Edad</mat-label>
-          <input matInput type="number" [(ngModel)]="user.age" name="age">
-        </mat-form-field>
+        <app-user-input-field
+            label="Edad"
+            type="number"
+            [value]="user.age"
+            (valueChange)="user.age = +$event">
+        </app-user-input-field>
 
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Ciudad</mat-label>
-          <textarea matInput [(ngModel)]="user.city" name="city"></textarea>
-        </mat-form-field>
+
+        <app-user-input-field
+          label="Ciudad"
+          type="textarea"
+          [value]="user.city"
+          (valueChange)="user.city = $event">
+        </app-user-input-field>
 
         <div class="buttons">
-          <button mat-raised-button
-                  color="primary"
-                  (click)="guardar()"
-                  [disabled]="!user.firstName">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="guardar()"
+            [disabled]="!user.firstName">
             Guardar
           </button>
 
-          <button mat-raised-button
-                  color="warn"
-                  (click)="reset()">
+          <button
+            mat-raised-button
+            color="warn"
+            (click)="reset()">
             Reiniciar
           </button>
         </div>
@@ -54,9 +65,11 @@
 
     <mat-divider></mat-divider>
 
-    <mat-card-content *ngIf="guardado">
-      <p class="ok">Perfil guardado correctamente</p>
-    </mat-card-content>
+    @if (guardado) {
+      <mat-card-content>
+        <p class="ok">Perfil guardado correctamente</p>
+      </mat-card-content>
+    }
 
     <mat-card-content>
       <h3>Vista previa</h3>
