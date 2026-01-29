@@ -1,0 +1,30 @@
+.producto {
+  width: 200px;
+  margin: 0.6rem;
+}
+ /* Espaciado del header */
+mat-card-header {
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+}
+
+/* Separar contenido del borde */
+mat-card-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Botones con aire */
+mat-card-actions {
+  padding-left: 1rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Centrar acciones del card */
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+}

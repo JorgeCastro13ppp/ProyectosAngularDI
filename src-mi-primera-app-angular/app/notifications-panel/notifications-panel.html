@@ -1,0 +1,36 @@
+<div class="container">
+
+  <mat-card class="panel">
+
+    <mat-card-header>
+      <mat-card-title>Notificaciones</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="agregar()">
+        Añadir notificación
+      </button>
+
+      <div class="list">
+
+        @if (notificaciones.length > 0) {
+          @for (noti of notificaciones; track noti.id) {
+            <app-notification
+              [mensaje]="noti.texto"
+              (cerrarNotificacion)="eliminar(noti.id)">
+            </app-notification>
+          }
+        } @else {
+          <p class="empty">No hay notificaciones</p>
+        }
+
+      </div>
+
+    </mat-card-content>
+
+  </mat-card>
+
+</div>

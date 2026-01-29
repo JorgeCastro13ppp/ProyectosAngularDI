@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.panel {
+  width: 420px;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}
+
+.mat-mdc-card-content:last-child {
+  padding-bottom: 16px;
+  margin-top: 1rem;
+}
+

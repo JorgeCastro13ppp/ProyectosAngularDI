@@ -1,0 +1,36 @@
+<div class="container">
+
+  <mat-card class="tienda-card">
+
+    <mat-card-header>
+      <mat-card-title><h3>Tienda</h3></mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <div class="productos">
+        @for (producto of productos; track producto.id) {
+          <app-producto
+            [producto]="producto"
+            (agregar)="agregarAlCarrito($event)">
+          </app-producto>
+        }
+      </div>
+
+      <hr>
+
+      <h3>Carrito</h3>
+
+      @if (carrito.length > 0) {
+        <p>Productos en carrito: {{ carrito.length }}</p>
+        <p>Total: {{ calcularTotal() }} €</p>
+      } @else {
+        <p class="empty">El carrito está vacío</p>
+      }
+
+    </mat-card-content>
+
+  </mat-card>
+
+</div>
+

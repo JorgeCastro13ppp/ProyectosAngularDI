@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 import { ProductoComponent } from '../producto/producto';
 import { Producto } from '../models/producto';
 
+import { MatCardModule } from '@angular/material/card';
+
 @Component({
   selector: 'app-tienda',
   standalone: true,
-  imports: [ProductoComponent],
+  imports: [
+    ProductoComponent,
+    MatCardModule   // 👈 ESTO FALTABA
+  ],
   templateUrl: './tienda.html',
   styleUrl: './tienda.css'
 })
@@ -21,7 +26,6 @@ export class Tienda {
 
   agregarAlCarrito(producto: Producto) {
     this.carrito.push(producto);
-    console.log('Carrito:', this.carrito);
   }
 
   calcularTotal(): number {

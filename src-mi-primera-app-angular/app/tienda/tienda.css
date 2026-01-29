@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.tienda-card {
+  width: 700px;
+  padding: 10px;
+}
+
+/* Zona de productos */
+.productos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Texto cuando el carrito está vacío */
+.empty {
+  color: #777;
+}
+
+/* (Esto ya lo tenías, lo dejo para contexto) */
+.producto {
+  width: 200px;
+  margin: 10px;
+}

@@ -1,0 +1,13 @@
+<mat-card class="notification">
+      <div class="content">
+        <span>{{ mensaje }}</span>
+
+        <button
+          mat-icon-button
+          color="primary"
+          (click)="cerrar()"
+          aria-label="Cerrar notificación">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </mat-card>
