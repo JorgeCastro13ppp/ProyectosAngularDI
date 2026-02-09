@@ -1,0 +1,10 @@
+<li>
+  <input
+  type="checkbox"
+  [checked]="tarea.completada"
+  (change)="toogle()">
+  <span [class.completada]="tarea.completada">
+    {{tarea.texto}}
+  </span>
+  <button (click)="eliminarTarea()">Eliminar</button>
+</li>
