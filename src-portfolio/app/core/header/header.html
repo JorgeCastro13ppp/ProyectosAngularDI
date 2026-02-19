@@ -1,0 +1,23 @@
+<header class="navbar">
+  <div class="logo">Jorge</div>
+
+  <button class="hamburger"
+        [class.active]="menuOpen"
+        (click)="toggleMenu()">
+
+  <span></span>
+  <span></span>
+  <span></span>
+
+</button>
+
+
+  <nav [class.open]="menuOpen">
+    <ul>
+      <li><a routerLink="/home" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+      <li><a routerLink="/projects" (click)="toggleMenu()">Projects</a></li>
+      <li><a routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+    </ul>
+  </nav>
+</header>

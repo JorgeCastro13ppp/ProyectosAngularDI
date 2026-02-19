@@ -1,0 +1,53 @@
+<section class="contact-section">
+
+  <div class="contact-wrapper">
+
+    <div class="contact-header">
+      <h2>Contacto</h2>
+      <p>
+        ¿Tienes alguna propuesta o quieres hablar sobre un proyecto?
+        Envíame un mensaje.
+      </p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+
+      <div class="form-field">
+        <label>Nombre</label>
+        <input type="text" formControlName="name">
+        @if (form.get('name')?.touched && form.get('name')?.invalid) {
+          <small>El nombre es obligatorio</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" formControlName="email">
+        @if (form.get('email')?.touched && form.get('email')?.invalid) {
+          <small>Introduce un email válido</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label>Mensaje</label>
+        <textarea rows="4" formControlName="message"></textarea>
+        @if (form.get('message')?.touched && form.get('message')?.invalid) {
+          <small>El mensaje es obligatorio</small>
+        }
+      </div>
+
+      <button type="submit" [disabled]="form.invalid">
+        Enviar mensaje
+      </button>
+
+    </form>
+
+    @if (submitted) {
+      <div class="success">
+        Mensaje enviado correctamente.
+      </div>
+    }
+
+  </div>
+
+</section>
