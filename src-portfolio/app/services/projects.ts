@@ -40,7 +40,7 @@ export class ProjectsService {
       title: 'Portfolio Angular',
       description:
         'Portfolio personal desarrollado con Angular standalone, routing, servicios y animaciones entre rutas.',
-      image: 'assets/portfolio.png',
+      image: 'assets/projects/portfolio.png',
       link: 'https://github.com/JorgeCastro13ppp',
       technologies: [
         'Angular Router',

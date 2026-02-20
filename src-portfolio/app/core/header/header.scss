@@ -127,3 +127,45 @@ nav a:hover {
     gap: 1.2rem;
   }
 }
+
+.icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+nav a:hover .icon {
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  nav a .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.links a:hover {
+  color: #667eea;
+}

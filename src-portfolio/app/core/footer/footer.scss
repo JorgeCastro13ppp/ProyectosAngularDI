@@ -17,3 +17,22 @@
   text-decoration: none;
   color: #667eea;
 }
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.links a:hover {
+  color: #667eea;
+}

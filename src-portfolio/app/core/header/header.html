@@ -1,5 +1,5 @@
 <header class="navbar">
-  <div class="logo">Jorge</div>
+  <div class="logo">Portfolio Jorge 2025-2026</div>
 
   <button class="hamburger"
         [class.active]="menuOpen"
@@ -14,10 +14,18 @@
 
   <nav [class.open]="menuOpen">
     <ul>
-      <li><a routerLink="/home" (click)="toggleMenu()">Home</a></li>
-      <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
-      <li><a routerLink="/projects" (click)="toggleMenu()">Projects</a></li>
-      <li><a routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+      <li><a routerLink="/home" (click)="toggleMenu()">
+        <img src="assets/icons/home.svg" alt="Home" class="icon">
+        Home</a></li>
+      <li><a routerLink="/about" (click)="toggleMenu()">
+        <img src="assets/icons/about.svg" alt="About" class="icon">
+        About</a></li>
+      <li><a routerLink="/projects" (click)="toggleMenu()">
+        <img src="assets/icons/projects.svg" alt="Projects" class="icon">
+        Projects</a></li>
+      <li><a routerLink="/contact" (click)="toggleMenu()">
+        <img src="assets/icons/contact.svg" alt="Contact" class="icon">
+        Contact</a></li>
     </ul>
   </nav>
 </header>
