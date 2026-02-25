@@ -10,6 +10,13 @@ export const routes: Routes = [
   { path: 'about', component: About },
   { path: 'projects', component: Projects },
   { path: 'contact', component: Contact },
-  { path: '**', redirectTo: 'home' }
+  {
+  path: 'anime',
+  loadComponent: () =>
+    import('./pages/anime-search/anime-search')
+      .then(m => m.AnimeSearch)
+},
+  { path: '**', redirectTo: 'home' },
+
 ];
 

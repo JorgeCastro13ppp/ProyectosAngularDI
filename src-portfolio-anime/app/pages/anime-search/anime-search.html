@@ -1,0 +1,35 @@
+<section class="anime-search">
+
+  <h2>Buscar Anime</h2>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="query"
+      placeholder="Escribe el nombre del anime..."
+      (keyup.enter)="search()"
+    >
+    <button (click)="search()">Buscar</button>
+  </div>
+
+  @if (loading) {
+  <p class="info">Cargando resultados...</p>
+}
+
+@if (error) {
+  <p class="error">Ha ocurrido un error.</p>
+}
+
+<div class="results">
+  @for (anime of (animes$ | async); track anime.mal_id) {
+    <div class="card">
+<img
+  [src]="anime.images?.jpg?.image_url || 'assets/placeholder.png'"
+  (error)="onImageError($event)"
+  alt="{{ anime.title }}">      <h3>{{ anime.title }}</h3>
+      <p>Puntuación: {{ anime.score || 'N/A' }}</p>
+    </div>
+  }
+</div>
+
+</section>
