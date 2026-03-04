@@ -1,5 +1,5 @@
 <header class="navbar">
-  <div class="logo">Portfolio Jorge 2025-2026</div>
+  <div class="logo">Portfolio Jorge L. DI</div>
 
   <button class="hamburger" [class.active]="menuOpen" (click)="toggleMenu()">
     <span></span>
@@ -35,8 +35,32 @@
       </li>
       <li>
         <a routerLink="/contact" (click)="toggleMenu()">
-          <img src="assets/icons/contact.svg" alt="Contact" class="icon" />
+          <img src="assets/icons/github.svg" alt="Contact" class="icon" />
           Contact</a
+        >
+      </li>
+      <!-- Comentario EXAMEN en HTML
+        Utilizamos un *ngIf si la variable userName existe o lo que es lo mismo, si no es null
+      -->
+      <li *ngIf="userName">
+        <a>
+          <img src="https://github.com/jorge.png" class="icon" />
+          {{userName}}
+          {{userEmail}}
+          <!-- Aquí utilizo las clases de scss que utilicé anteriormente, además asigno el routerLink y asigno la función que creado para comprobar el funcionamiento del localStorage
+           Si se pulsa el botón se borran los localStorage
+        -->
+          <div class="hero-buttons">
+            <button class="btn secondary" routerLink="/home" (click)="logOut()">Log out</button>
+          </div>
+
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/registro" (click)="toggleMenu()">
+          <img src="assets/icons/contact.svg" alt="Contact" class="icon" />
+          Registro</a
         >
       </li>
     </ul>

@@ -1,0 +1,50 @@
+<section class="registro-section">
+
+  <div class="registro-wrapper">
+
+    <div class="registro-header">
+      <h2>Registro</h2>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+
+      <div class="form-field">
+        <label>Nombre</label>
+        <input type="text" formControlName="name">
+        @if (form.get('name')?.touched && form.get('name')?.invalid) {
+          <small>Nombre requerido (mín. 5 chars)</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label>Password</label>
+        <input type="password" formControlName="password">
+        @if (form.get('password')?.touched && form.get('password')?.invalid) {
+          <small>Nombre requerido (mín. 8 chars)</small>
+        }
+      </div>
+
+      <div class="form-field">
+        <label>Correo electrónico</label>
+        <input type="email" formControlName="email">
+        @if (form.get('email')?.touched && form.get('email')?.invalid) {
+          <small>Introduce un email válido</small>
+        }
+      </div>
+
+      <button type="submit" [disabled]="form.invalid">
+        Enviar
+      </button>
+
+    </form>
+
+    @if (submitted) {
+      <div class="success">
+        Usuario registrado correctamente.
+      </div>
+    }
+
+  </div>
+
+</section>
+

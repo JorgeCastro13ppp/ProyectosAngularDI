@@ -169,3 +169,41 @@ nav a:hover .icon {
 .links a:hover {
   color: #667eea;
 }
+
+/* Aquí están las clases reutilizadas, modifiqué un poco su tamaño de manera improvisada pero no fue suficiente para que se vea bien, por el tiempo del examen esto es provisional y para pruebas */
+
+.hero-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  font-weight: 60;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.secondary {
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+.secondary:hover {
+  background: #667eea;
+  color: white;
+}
